@@ -658,7 +658,7 @@ public static void leadsharingAsfterInsert(list<Lead> leadupdate)
                     contrt.Legal_Approval__c = leadRecord.Legal_Approval__c;
                     contrt.Credit_Control_Team_Approval__c = leadRecord.Credit_Control_Team_Approval__c;
                     contrt.Approval_Status__c = 'Draft';
-                    contrt.StartDate = system.today();
+                    contrt.StartDate = leadRecord.Contract_Start_Date__c;
                     contrt.Vendor_Code_Activation__c = leadRecord.Vendor_Code_Activation__c;
                     if(leadRecord.Contract_Term_Month__c != null)
                         contrt.ContractTerm = Integer.ValueOf(leadRecord.Contract_Term_Month__c);
